@@ -27,26 +27,26 @@ public class ClickManager : MonoBehaviour
         {
             Conveyer = hit.transform.gameObject;
             Debug.Log(Conveyer);
-            Conveyer.transform.GetChild(0).gameObject.SetActive(false);
-            Conveyer.transform.GetChild(1).gameObject.SetActive(true);
         }
         if (Conveyer != null)
         {
             Drag();
         }
-        if(Input.GetMouseButtonUp(0))
-        {
-            Conveyer.transform.GetChild(0).gameObject.SetActive(true);
-            Conveyer.transform.GetChild(1).gameObject.SetActive(false);
+        if(Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit))
+        {   
+            Conveyer.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
             Conveyer = null;
         }
     }
     public void Drag()
     {
-        Vector3 scrSpace = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, scrSpace.z);
-        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Conveyer.transform.position = objPosition;
+        int Glayermask = (1 << LayerMask.NameToLayer("Ground"));
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, Glayermask))
+        {
+            Debug.Log("드래그중");
+            Vector3 objPosition = new Vector3(hit.point.x,hit.point.y + Conveyer.transform.localScale.y/2, hit.point.z);
+            Conveyer.transform.position = objPosition;
+        }
     }
     /*
     public void drag()
