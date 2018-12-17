@@ -30,9 +30,8 @@ public class MapGenerator : MonoBehaviour {
         {
             for(int y=0; y < mapSize.y; y++)
             {
-                Vector3 tilePosition = new Vector3(-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y/2 + 0.5f + y);
-                Transform newTile = Instantiate(tilePrefab, tilePosition, Quaternion.Euler(Vector3.right * 90)) as Transform;
-                newTile.localScale = Vector3.one * (1 - outlinePercent);
+                Vector3 tilePosition = (new Vector3(mapSize.x / 2, 0 , mapSize.y/2) + new Vector3(x - mapSize.x, 0, y - mapSize.y)) * tilePrefab.transform.localScale.x;
+                Transform newTile = Instantiate(tilePrefab, tilePosition, Quaternion.identity) as Transform;
                 newTile.parent = mapHolder;
             }
         }
