@@ -46,21 +46,25 @@ public class ClickManager : MonoBehaviour
             if(Conveyer != null)
             {
                 RaycastHit hit_Conveyer;
-                Vector3 ground_Pos = ground.transform.position;
-                Vector3 up_Pos = new Vector3(ground_Pos.x, Conveyer.transform.position.y, ground_Pos.z);
-                if(Physics.Raycast(up_Pos, Conveyer.transform.up * -1, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
+                if(ground != null)
                 {
-                    Vector3 pos_Conveyer;
-                    if (hit_Conveyer.transform.tag == "Conveyor")
+                    Vector3 ground_Pos = ground.transform.position;
+                    Vector3 up_Pos = new Vector3(ground_Pos.x, Conveyer.transform.position.y, ground_Pos.z);
+                    if (Physics.Raycast(up_Pos, Conveyer.transform.up * -1, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
                     {
-                        Conveyer.transform.GetChild(0).gameObject.SetActive(true);
-                        pos_Conveyer = hit_Conveyer.transform.parent.position;
+                        Vector3 pos_Conveyer;
+                        if (hit_Conveyer.transform.tag == "Conveyor")
+                        {
+                            Conveyer.transform.GetChild(0).gameObject.SetActive(true);
+                            pos_Conveyer = hit_Conveyer.transform.parent.position;
+                        }
+                        else
+                            pos_Conveyer = hit_Conveyer.transform.position;
+                        ground.GetComponent<MeshRenderer>().material.color = Color.green;
+                        Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y + hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
+                        Conveyer = null;
                     }
-                    else
-                    pos_Conveyer = hit_Conveyer.transform.position;
-                    ground.GetComponent<MeshRenderer>().material.color = Color.green;
-                    Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y + hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
-                    Conveyer = null;
+                
                 }
             }
             
