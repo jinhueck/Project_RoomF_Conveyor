@@ -25,7 +25,7 @@ public class MapGenerator : MonoBehaviour
     private void Start()
     {
         GeneratorMap();
-        SetUpConveyor();
+        //SetUpConveyor();
     }
 
     public void GeneratorMap()

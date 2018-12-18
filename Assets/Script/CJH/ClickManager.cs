@@ -49,7 +49,7 @@ public class ClickManager : MonoBehaviour
                 if(ground != null)
                 {
                     Vector3 ground_Pos = ground.transform.position;
-                    Vector3 up_Pos = new Vector3(ground_Pos.x, Conveyer.transform.position.y, ground_Pos.z);
+                    Vector3 up_Pos = new Vector3(ground_Pos.x, Conveyer.transform.position.y - 0.1f, ground_Pos.z);
                     if (Physics.Raycast(up_Pos, Conveyer.transform.up * -1, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
                     {
                         Vector3 pos_Conveyer;
