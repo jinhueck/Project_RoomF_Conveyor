@@ -72,14 +72,67 @@
     <Compile Include="Assets\ModularConveyorTools\Editor\ExtrudeWizardEditor.cs" />
     <Compile Include="Assets\ModularConveyorTools\Editor\LinearConveyorEditor.cs" />
     <Compile Include="Assets\ModularConveyorTools\Editor\RadialConveyorEditor.cs" />
-    <None Include="Assets\Unity-QuickSheet-master\Assets\QuickSheet\ExcelPlugin\Editor\Library\NPOI.2.1.1.txt" />
+    <Compile Include="Assets\QuickSheet\Editor\BaseEditor.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\BaseMachine.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\BaseMachineEditor.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\CustomAssetUtility.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\GUIHelper.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\ScriptGenerator.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\ScriptPrescription.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\Util\Cloner.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\Util\CsvParser.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\Util\Singleton.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\Util\SingletonScriptableObject.cs" />
+    <Compile Include="Assets\QuickSheet\Editor\Util\Util.cs" />
+    <Compile Include="Assets\QuickSheet\Example\Data\Editor\ExcelExampleAssetPostProcessor.cs" />
+    <Compile Include="Assets\QuickSheet\Example\Data\Editor\ExcelExampleEditor.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\BaseExcelEditor.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\ExcelMachine.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\ExcelMachineEditor.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\ExcelQuery.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\ExcelSettings.cs" />
+    <Compile Include="Assets\QuickSheet\ExcelPlugin\Editor\ExcelSettingsEditor.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\BaseGoogleEditor.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\Evaluator.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\ExpressionVisitor.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\GDataDBQueryProvider.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\OrderTranslator.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\Query.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\QueryProvider.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\QueryTranslator.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\TypeSystem.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\Impl\WhereTranslator.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB.Linq\ITableExtensions.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\DatabaseClient.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\IDatabase.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\IDatabaseClient.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Impl\Database.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Impl\GDataDBRequestFactory.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Impl\Row.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Impl\Serializer.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Impl\Table.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\IRow.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\ITable.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Order.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\GDataDB\Query.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GoogleDataSettings.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GoogleDataSettingsEditor.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GoogleMachine.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\GoogleMachineEditor.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\Sheet1AssetCreator.cs" />
+    <Compile Include="Assets\QuickSheet\GDataPlugin\Editor\Sheet1Editor.cs" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Editor\Google\Newtonsoft.Json.xml" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Editor\Google\Google.GData.license.txt" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Editor\Library\NPOI.2.1.1.txt" />
     <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
     <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Editor\Google\license.txt" />
     <None Include="Assets\GooglePlayGames\Editor\GooglePlayGamesPluginDependencies.xml" />
     <None Include="Assets\GooglePlayGames\Editor\template-Constants.txt" />
     <None Include="Assets\GooglePlayGames\Editor\m2repository\com\google\games\gpgs-plugin-support\maven-metadata.xml" />
     <None Include="Assets\GooglePlayGames\Editor\GooglePlayGamesPlugin_v0.9.57.txt" />
-    <None Include="Assets\Unity-QuickSheet-master\Assets\QuickSheet\ExcelPlugin\Editor\Library\Release Notes.txt" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Editor\GDataDB\license.txt" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Editor\Library\Release Notes.txt" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.95.0.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -348,21 +401,6 @@
     <Reference Include="Google.VersionHandlerImpl_v1.2.95.0">
       <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.95.0.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/Unity-QuickSheet-master/Assets/QuickSheet/ExcelPlugin/Editor/Library/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI">
-      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/Unity-QuickSheet-master/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OOXML">
-      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/Unity-QuickSheet-master/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OOXML.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/Unity-QuickSheet-master/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OpenXml4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/Unity-QuickSheet-master/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OpenXmlFormats.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Atents/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -380,6 +418,39 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/ExcelPlugin/Editor/Library/NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/ExcelPlugin/Editor/Library/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Documents">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Google.GData.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Google.GData.AccessControl.DLL</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Spreadsheets">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Google.GData.Spreadsheets.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Assets/QuickSheet/GDataPlugin/Editor/Google/Google.GData.Client.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>E:/최정환/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>

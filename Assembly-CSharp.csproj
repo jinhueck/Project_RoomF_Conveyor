@@ -244,14 +244,30 @@
     <Compile Include="Assets\ModularConveyorTools\Scripts\LinearConveyor.cs" />
     <Compile Include="Assets\ModularConveyorTools\Scripts\RadialConveyor.cs" />
     <Compile Include="Assets\ModularConveyorTools\Scripts\Roller.cs" />
+    <Compile Include="Assets\QuickSheet\Example\Data\Runtime\ExcelExample.cs" />
+    <Compile Include="Assets\QuickSheet\Example\Data\Runtime\ExcelExampleData.cs" />
+    <Compile Include="Assets\QuickSheet\Example\Difficulty.cs" />
+    <Compile Include="Assets\QuickSheet\Runtime\ExposePropertyAttribute.cs" />
+    <Compile Include="Assets\QuickSheet\Runtime\Sheet1.cs" />
+    <Compile Include="Assets\QuickSheet\Runtime\Sheet1Data.cs" />
+    <Compile Include="Assets\QuickSheet\Runtime\Util\ConvertExt.cs" />
     <Compile Include="Assets\Script\CJH\ClickManager.cs" />
     <Compile Include="Assets\Script\CJH\MapGenerator.cs" />
     <Compile Include="Assets\Script\LHJ\ArriveBox.cs" />
     <Compile Include="Assets\Script\LHJ\Floor.cs" />
     <Compile Include="Assets\Script\LHJ\InGameManger.cs" />
     <Compile Include="Assets\Script\LHJ\MakeBox.cs" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Templates\DataClass.txt" />
+    <None Include="Assets\Unity-QuickSheet-master\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\ModularConveyorTools\Shaders\Conveyor.shader" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Templates\ScriptableObjectEditorClass.txt" />
     <None Include="Assets\GooglePlayGames\Plugins\Android\GooglePlayGamesManifest.plugin\AndroidManifest.xml" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Templates\PostProcessor.txt" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Templates\ScriptableObjectClass.txt" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Templates\ScriptableObjectEditorClass.txt" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Templates\ScriptableObjectClass.txt" />
+    <None Include="Assets\QuickSheet\GDataPlugin\Templates\AssetFileClass.txt" />
+    <None Include="Assets\QuickSheet\ExcelPlugin\Templates\DataClass.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Atents/Documents/Project_RoomF_Conveyor/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -58,14 +58,14 @@ public class MapGenerator : MonoBehaviour
         //int test = 0;
         int size = (int)(mapSize.x * mapSize.y);
         int[,] array = new int[5, size];
-        for (int i = 0; i < 5; i++)
+        for (int Floor = 0; Floor < 5; Floor++)
         {
-            for (int j = 0; j < size; j++)
+            for (int Childnum = 0; Childnum < size; Childnum++)
             {
-                array[i, j] = 1;
-                if (array[i, j] == 1)
+                array[Floor, Childnum] = 1;
+                if (array[Floor, Childnum] == 1)
                 {
-                    SelectConveyor(1, j, i + 1);
+                    SelectConveyor(1, Childnum, Floor + 1);
                 }
                 //Debug.Log("array" + i + "," + j + " = " + test);
             }
@@ -77,6 +77,8 @@ public class MapGenerator : MonoBehaviour
         Vector3 TilePos = GameObject.Find("MapManager").transform.GetChild(Setupnum).transform.position;
         switch (Connum)
         {
+            case 0:
+                break;
             case 1:
                 GameObject obj1 = Instantiate(Tile1, new Vector3(0f, 0f, 0f), Quaternion.identity);
                 obj1.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
