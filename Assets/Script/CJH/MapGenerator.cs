@@ -81,7 +81,37 @@ public class MapGenerator : MonoBehaviour
                 GameObject obj1 = Instantiate(Tile1, new Vector3(0f, 0f, 0f), Quaternion.identity);
                 obj1.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
                 break;
+            case 2:
+                GameObject obj2 = Instantiate(Tile2, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj2.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 3:
+                GameObject obj3 = Instantiate(Tile3, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj3.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 4:
+                GameObject obj4 = Instantiate(Tile4, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj4.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 5:
+                GameObject obj5 = Instantiate(Tile5, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj5.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 6:
+                GameObject obj6 = Instantiate(Tile6, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj6.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 7:
+                GameObject obj7 = Instantiate(Tile7, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj7.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
+            case 8:
+                GameObject obj8 = Instantiate(Tile8, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                obj8.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                break;
 
+            default:
+                break;
         }
     }
 }
