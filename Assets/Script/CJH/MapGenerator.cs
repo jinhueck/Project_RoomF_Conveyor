@@ -6,7 +6,7 @@ public class MapGenerator : MonoBehaviour
 {
 
     public Transform tilePrefab;
-    public Vector2 mapSize;
+    private Vector2 mapSize;
     public GameObject Map;
     public GameObject Tile1;
     public GameObject Tile2;
@@ -16,12 +16,15 @@ public class MapGenerator : MonoBehaviour
     public GameObject Tile6;
     public GameObject Tile7;
     public GameObject Tile8;
+    public GameObject Tile9;
 
-    private num1 conveyorInfo;
+    private stage1map1 conveyorInfo;
+    //private stage1map2 conveyorInfo;
 
+    public int Mapnum;//맵의 번호
 
-    private int[,] array;
-    private int size;
+    private int[,] array; // 배열
+    private int size; // 배열의 크기
 
 
     [Range(0, 1)]
@@ -29,12 +32,24 @@ public class MapGenerator : MonoBehaviour
 
     private void Start()
     {
-        size = (int)(mapSize.x * mapSize.y);
-        array = new int[5, size];
-        conveyorInfo = Resources.Load<num1>("CJH/New num1");
+        SetMapInfo();
         GetConveyor();
         GeneratorMap();
         SetUpConveyor();
+    }
+
+    public void SetMapInfo()
+    {
+        conveyorInfo = Resources.Load<stage1map1>("CJH/New stage"+1+"map"+Mapnum);
+        mapSize.x = conveyorInfo.dataArray[0].Mapsize[0];
+        mapSize.y = conveyorInfo.dataArray[1].Mapsize[0];
+        size = (int)(mapSize.x * mapSize.y);
+        array = new int[5, size];
+    }
+
+    public int LoadMapNum()
+    {
+        return Mapnum;
     }
 
     public void GeneratorMap()
@@ -78,8 +93,7 @@ public class MapGenerator : MonoBehaviour
     }
 
     public void GetConveyor()
-    {
-        
+    {   
         Debug.Log("컨베이어 인포 사이즈" + conveyorInfo.dataArray.Length);
         //Debug.Log("Floor0tile 0,0값 " + conveyorInfo.dataArray[0].Floor0tile[0]);
         for (int i = 0; i< 5; i++)
@@ -143,6 +157,9 @@ public class MapGenerator : MonoBehaviour
                 break;
             case 8:
                 GameObject obj8 = Instantiate(Tile8, pos, Tile8.transform.rotation);
+                break;
+            case 9:
+                GameObject obj9 = Instantiate(Tile9, pos, Tile9.transform.rotation);
                 break;
 
             default:

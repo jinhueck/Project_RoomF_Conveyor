@@ -6,7 +6,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdb4931813a361148a6651be452ff88e, type: 3}
   m_Name: New Import Setting
@@ -15,7 +15,7 @@ MonoBehaviour:
   scriptFilePath: QuickSheet/Test/Runtime/
   editorScriptFilePath: QuickSheet/Test/Editor/
   sheetName: Project_Conveyor
-  workSheetName: num1
+  workSheetName: stage1map2
   columnHeaderList:
   - type: 3
     name: Floor0Tile
@@ -35,6 +35,10 @@ MonoBehaviour:
     isArray: 1
   - type: 3
     name: Floor4Tile
+    isEnable: 0
+    isArray: 1
+  - type: 3
+    name: MapSize
     isEnable: 0
     isArray: 1
   AccessCode: 

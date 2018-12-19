@@ -321,7 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161531228
 GameObject:
@@ -508,7 +508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &737425584
 GameObject:
@@ -538,7 +538,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 4058893963453832, guid: 0fd5f2d704cc39841a6fd49d904d94d6, type: 2}
-  mapSize: {x: 5, y: 3}
   Map: {fileID: 737425584}
   Tile1: {fileID: 1217784152670866, guid: ab6c086798c15b94bacc3d9b880d1ee4, type: 2}
   Tile2: {fileID: 1421882451268712, guid: 69a592728079416408e8965d3e300853, type: 2}
@@ -548,6 +547,8 @@ MonoBehaviour:
   Tile6: {fileID: 1797601222397586, guid: 604f8cce1c7a60545864331d3b6dbf26, type: 2}
   Tile7: {fileID: 1514755920309618, guid: 1408c82d9e149c54a9f60f7694381ef1, type: 2}
   Tile8: {fileID: 1702257193539266, guid: b8beafa0b91519f4f83dea0da4f85d10, type: 2}
+  Tile9: {fileID: 1138905891428408, guid: 6575a350ee3b61b4c9d48229e95fff94, type: 2}
+  Mapnum: 1
   outlinePercent: 0.031
 --- !u!4 &737425586
 Transform:
@@ -560,7 +561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826771493
 GameObject:
@@ -668,7 +669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4057967787894672, guid: a7cf9eea7ab641f46ade2016170b74df, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1433174222822636, guid: a7cf9eea7ab641f46ade2016170b74df, type: 2}
       propertyPath: m_Name
@@ -779,7 +780,7 @@ RectTransform:
   m_Children:
   - {fileID: 30302336}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -872,7 +873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1618119938
 BoxCollider:

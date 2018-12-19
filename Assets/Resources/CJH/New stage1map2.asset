@@ -8,84 +8,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75172bc977af2d4aa53cccf91cad2b0, type: 3}
-  m_Name: New num1
+  m_Script: {fileID: 11500000, guid: 31e9ea82c8c67f847916dcbf5eb56cb9, type: 3}
+  m_Name: New stage1map2
   m_EditorClassIdentifier: 
   SheetName: Project_Conveyor
-  WorksheetName: num1
+  WorksheetName: stage1map2
   dataArray:
-  - floor0tile: 00000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
   - floor0tile: 01000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
+    mapsize: 03000000
   - floor0tile: 02000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 03000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 04000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
+    mapsize: 03000000
   - floor0tile: 05000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 06000000
+    mapsize: 
+  - floor0tile: 09000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 07000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 08000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
+    mapsize: 
   - floor0tile: 00000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 01000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
+    mapsize: 
   - floor0tile: 02000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 03000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 04000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
+    mapsize: 
   - floor0tile: 05000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
