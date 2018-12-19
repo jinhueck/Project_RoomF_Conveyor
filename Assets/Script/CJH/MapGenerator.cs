@@ -29,8 +29,8 @@ public class MapGenerator : MonoBehaviour
 
     private void Start()
     {
-        array = new int[5, size];
         size = (int)(mapSize.x * mapSize.y);
+        array = new int[5, size];
         conveyorInfo = Resources.Load<num1>("CJH/New num1");
         GetConveyor();
         GeneratorMap();
@@ -69,6 +69,7 @@ public class MapGenerator : MonoBehaviour
         {
             for (int Childnum = 0; Childnum < size; Childnum++)
             {
+                Debug.Log("array 정보 Floor = " + Floor+ "Childnum = " + Childnum + " ="+array[Floor, Childnum]);
                 //array[Floor, Childnum] = 1;
                 SelectConveyor(array[Floor, Childnum], Childnum, Floor + 1);
                 //Debug.Log("array" + i + "," + j + " = " + test);
@@ -80,15 +81,33 @@ public class MapGenerator : MonoBehaviour
     {
         
         Debug.Log("컨베이어 인포 사이즈" + conveyorInfo.dataArray.Length);
-        for(int i = 0; i< 5; i++)
+        //Debug.Log("Floor0tile 0,0값 " + conveyorInfo.dataArray[0].Floor0tile[0]);
+        for (int i = 0; i< 5; i++)
         {
             for(int j = 0; j< conveyorInfo.dataArray.Length; j++)
             {
-                if(j == 0)
+                //array[i, j] = conveyorInfo.dataArray[j].Floor0tile[0];
+                if(i == 0)
                 {
-                    array[i, j] = conveyorInfo.dataArray[i].Floor0tile[0];
+                    array[i, j] = conveyorInfo.dataArray[j].Floor0tile[0];
                 }
-                
+                else if (i == 1)
+                {
+                    array[i, j] = conveyorInfo.dataArray[j].Floor1tile[0];
+                }
+                else if (i == 2)
+                {
+                    array[i, j] = conveyorInfo.dataArray[j].Floor2tile[0];
+                }
+                else if (i == 3)
+                {
+                    array[i, j] = conveyorInfo.dataArray[j].Floor3tile[0];
+                }
+                else if (i == 4)
+                {
+                    array[i, j] = conveyorInfo.dataArray[j].Floor4tile[0];
+                }
+                Debug.Log("array 정보 Floor = " + i + "Childnum = " + j + " =" + array[i, j]);
             }
         }
     }
@@ -96,41 +115,34 @@ public class MapGenerator : MonoBehaviour
     public void SelectConveyor(int Connum, int Setupnum, int Height)
     {
         Vector3 TilePos = GameObject.Find("MapManager").transform.GetChild(Setupnum).transform.position;
+        Vector3 pos = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z); 
         switch (Connum)
         {
             case 0:
                 break;
             case 1:
-                GameObject obj1 = Instantiate(Tile1, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj1.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj1 = Instantiate(Tile1, pos, Tile1.transform.rotation);
                 break;
             case 2:
-                GameObject obj2 = Instantiate(Tile2, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj2.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj2 = Instantiate(Tile2, pos, Tile2.transform.rotation);
                 break;
             case 3:
-                GameObject obj3 = Instantiate(Tile3, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj3.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj3 = Instantiate(Tile3, pos, Tile3.transform.rotation);
                 break;
             case 4:
-                GameObject obj4 = Instantiate(Tile4, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj4.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj4 = Instantiate(Tile4, pos, Tile4.transform.rotation);
                 break;
             case 5:
-                GameObject obj5 = Instantiate(Tile5, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj5.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj5 = Instantiate(Tile5, pos, Tile5.transform.rotation);
                 break;
             case 6:
-                GameObject obj6 = Instantiate(Tile6, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj6.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj6 = Instantiate(Tile6, pos, Tile6.transform.rotation);
                 break;
             case 7:
-                GameObject obj7 = Instantiate(Tile7, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj7.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj7 = Instantiate(Tile7, pos, Tile7.transform.rotation);
                 break;
             case 8:
-                GameObject obj8 = Instantiate(Tile8, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                obj8.transform.position = new Vector3(TilePos.x, TilePos.y + Height, TilePos.z);
+                GameObject obj8 = Instantiate(Tile8, pos, Tile8.transform.rotation);
                 break;
 
             default:

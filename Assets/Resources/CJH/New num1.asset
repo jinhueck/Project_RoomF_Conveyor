@@ -29,12 +29,12 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 01000000
+  - floor0tile: 03000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 00000000
+  - floor0tile: 04000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
@@ -44,27 +44,27 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
+  - floor0tile: 06000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+  - floor0tile: 07000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
   - floor0tile: 08000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 03000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
   - floor0tile: 00000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-  - floor0tile: 00000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 00000000
+  - floor0tile: 01000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
@@ -74,17 +74,17 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
+  - floor0tile: 03000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+  - floor0tile: 04000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
   - floor0tile: 05000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 08000000
-    floor1tile: 00000000
-    floor2tile: 00000000
-    floor3tile: 00000000
-    floor4tile: 00000000
-  - floor0tile: 01000000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000
