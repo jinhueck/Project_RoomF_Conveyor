@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Name: Google Data Settings
   m_EditorClassIdentifier: 
   TemplatePath: QuickSheet/GDataPlugin/Templates
-  RuntimePath: 
-  EditorPath: 
+  RuntimePath: QuickSheet/Test/Runtime/
+  EditorPath: QuickSheet/Test/Editor/
   OAuth2Data:
-    client_id: 
-    auth_uri: 
-    token_uri: 
-    auth_provider_x509_cert_url: 
-    client_secret: 
-    redirect_uris: []
-  _AccessCode: Paste AcecessCode here!
-  _RefreshToken: 
-  _AccessToken: 
+    client_id: 611914944898-gk7lii8ktn90l63usirehluvlo6iu0aq.apps.googleusercontent.com
+    auth_uri: https://accounts.google.com/o/oauth2/auth
+    token_uri: https://www.googleapis.com/oauth2/v3/token
+    auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+    client_secret: 8K0fWqa5JzbcBDkZ0BrPk3QS
+    redirect_uris:
+    - urn:ietf:wg:oauth:2.0:oob
+    - http://localhost
+  _AccessCode: 4/uAB4E7FXpyTvZcGaNKjFkY04zNzaGWc3opSj1QTaF80SeIfUNhTypZ4
+  _RefreshToken: 1/9fgHciKW9Pk9rey-ndP4liuVib8hw-qUGexi1bwltNCTr9m-CixzQmcOp9YMuhwI
+  _AccessToken: ya29.Glt3Bn_WoGhUdZqsnMWT55u8P902ii-4ZudnsUrCCvdsgD6HmLRiOn-MHs1JFPZD8aB5mXUicFrcMMC5EcSRAfYyobwGuKRLBxzIlDb3-hPqqa7WUq3ykd89QCQO

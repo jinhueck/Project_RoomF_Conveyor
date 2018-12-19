@@ -17,6 +17,11 @@ public class MapGenerator : MonoBehaviour
     public GameObject Tile7;
     public GameObject Tile8;
 
+    private num1 conveyorInfo;
+
+
+    private int[,] array;
+    private int size;
 
 
     [Range(0, 1)]
@@ -24,6 +29,10 @@ public class MapGenerator : MonoBehaviour
 
     private void Start()
     {
+        array = new int[5, size];
+        size = (int)(mapSize.x * mapSize.y);
+        conveyorInfo = Resources.Load<num1>("CJH/New num1");
+        GetConveyor();
         GeneratorMap();
         SetUpConveyor();
     }
@@ -56,18 +65,30 @@ public class MapGenerator : MonoBehaviour
     public void SetUpConveyor()
     {
         //int test = 0;
-        int size = (int)(mapSize.x * mapSize.y);
-        int[,] array = new int[5, size];
         for (int Floor = 0; Floor < 5; Floor++)
         {
             for (int Childnum = 0; Childnum < size; Childnum++)
             {
-                array[Floor, Childnum] = 1;
-                if (array[Floor, Childnum] == 1)
-                {
-                    SelectConveyor(1, Childnum, Floor + 1);
-                }
+                //array[Floor, Childnum] = 1;
+                SelectConveyor(array[Floor, Childnum], Childnum, Floor + 1);
                 //Debug.Log("array" + i + "," + j + " = " + test);
+            }
+        }
+    }
+
+    public void GetConveyor()
+    {
+        
+        Debug.Log("컨베이어 인포 사이즈" + conveyorInfo.dataArray.Length);
+        for(int i = 0; i< 5; i++)
+        {
+            for(int j = 0; j< conveyorInfo.dataArray.Length; j++)
+            {
+                if(j == 0)
+                {
+                    array[i, j] = conveyorInfo.dataArray[i].Floor0tile[0];
+                }
+                
             }
         }
     }
