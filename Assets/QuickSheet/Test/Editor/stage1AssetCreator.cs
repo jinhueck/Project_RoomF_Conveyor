@@ -8,12 +8,12 @@ using UnityQuickSheet;
 /// 
 public partial class GoogleDataAssetUtility
 {
-    [MenuItem("Assets/Create/Google/stage1map1")]
-    public static void Createstage1map1AssetFile()
+    [MenuItem("Assets/Create/Google/stage1")]
+    public static void Createstage1AssetFile()
     {
-        stage1map1 asset = CustomAssetUtility.CreateAsset<stage1map1>();
+        stage1 asset = CustomAssetUtility.CreateAsset<stage1>();
         asset.SheetName = "Project_Conveyor";
-        asset.WorksheetName = "stage1map1";
+        asset.WorksheetName = "stage1";
         EditorUtility.SetDirty(asset);        
     }
     

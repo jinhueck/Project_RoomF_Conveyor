@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4598422298028502}
   - component: {fileID: 114754050161007518}
+  - component: {fileID: 114520620275757540}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -288,7 +289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433174222822636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 1, z: -1.5}
+  m_LocalPosition: {x: -7.5, y: 2, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4021790954999148}
@@ -1121,6 +1122,18 @@ MonoBehaviour:
   distance: 1
   instancedMaterial: 0
   speed: 0.5
+--- !u!114 &114520620275757540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515088971997302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb029a150a387d46a713252b3456173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Goals: {fileID: 1153716093416920, guid: 5a6fc2d8b71c9e944aa414f62bb06fe3, type: 2}
 --- !u!114 &114547992560132632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1146,8 +1159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9309af6c561a04098b50cb3e921014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Box:
-  - {fileID: 1032559287870794, guid: 2c97a363e3804d1439a0f4faf60c4744, type: 2}
+  Box: {fileID: 1032559287870794, guid: 2c97a363e3804d1439a0f4faf60c4744, type: 2}
+  BoxColor:
+  - {fileID: 2100000, guid: d79eab2c6af0d4f4db350d55f1053038, type: 2}
+  - {fileID: 2100000, guid: c98f5667bcc2d1147978b8d581222d9c, type: 2}
   starttime: 20
   repeattime: 5
 --- !u!114 &114824189007544832

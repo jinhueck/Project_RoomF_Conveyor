@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Conveyor
+  - Conveyor_Stair
+  - Box
+  - nonClick
+  - nonClick_Stair
+  - RedBox
+  - GreenBox
   layers:
   - Default
   - TransparentFX

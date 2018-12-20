@@ -12,26 +12,26 @@ using UnityQuickSheet;
 ///
 /// !!! Machine generated code !!!
 ///
-[CustomEditor(typeof(stage1map2))]
-public class stage1map2Editor : BaseGoogleEditor<stage1map2>
+[CustomEditor(typeof(stage1))]
+public class stage1Editor : BaseGoogleEditor<stage1>
 {	    
     public override bool Load()
     {        
-        stage1map2 targetData = target as stage1map2;
+        stage1 targetData = target as stage1;
         
         var client = new DatabaseClient("", "");
         string error = string.Empty;
         var db = client.GetDatabase(targetData.SheetName, ref error);	
-        var table = db.GetTable<stage1map2Data>(targetData.WorksheetName) ?? db.CreateTable<stage1map2Data>(targetData.WorksheetName);
+        var table = db.GetTable<stage1Data>(targetData.WorksheetName) ?? db.CreateTable<stage1Data>(targetData.WorksheetName);
         
-        List<stage1map2Data> myDataList = new List<stage1map2Data>();
+        List<stage1Data> myDataList = new List<stage1Data>();
         
         var all = table.FindAll();
         foreach(var elem in all)
         {
-            stage1map2Data data = new stage1map2Data();
+            stage1Data data = new stage1Data();
             
-            data = Cloner.DeepCopy<stage1map2Data>(elem.Element);
+            data = Cloner.DeepCopy<stage1Data>(elem.Element);
             myDataList.Add(data);
         }
                 

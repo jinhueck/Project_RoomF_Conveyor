@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23143924929513774}
   - component: {fileID: 65093161451360346}
   - component: {fileID: 54918507821838044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,9 +39,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4819365854114756}
   - component: {fileID: 65836782228144394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject
-  m_TagString: Box
+  m_TagString: RedBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d79eab2c6af0d4f4db350d55f1053038, type: 2}
+  - {fileID: 2100000, guid: d6de34a8183119b4893b5d959591a442, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

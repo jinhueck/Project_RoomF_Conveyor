@@ -6,13 +6,14 @@ public class Floor : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {       
-        
-        if (other.tag=="Box")
+        if (other.tag=="Conveyor")
         {
+            return;
+        }
+
             GameObject parent = other.transform.parent.gameObject;
-            InGameManger.instance.totalbox++;
+            InGameManger.instance.boxcount++;
             other.GetComponent<Collider>().enabled = false;
             Destroy(parent, 1f);
-        }
     }
 }

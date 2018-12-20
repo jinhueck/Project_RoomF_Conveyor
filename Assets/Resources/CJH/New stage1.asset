@@ -1,0 +1,286 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47715062a042a164a91b1a6e2c533211, type: 3}
+  m_Name: New stage1
+  m_EditorClassIdentifier: 
+  SheetName: Project_Conveyor
+  WorksheetName: stage1
+  dataArray:
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: dc000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: 82000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 82000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 6e000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: 4a010000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 84030000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: d2000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 8c000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: f0000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 84030000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 6e000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: d2000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: f0000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: 6e000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: d2000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 8c000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 84030000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 8c000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 4b010000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: d2000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 03000000
+  - floor0tile: dc000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 54010000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 4a010000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 00000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 84030000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 
+  - floor0tile: 78000000
+    floor1tile: 00000000
+    floor2tile: 00000000
+    floor3tile: 00000000
+    floor4tile: 00000000
+    mapsize: 

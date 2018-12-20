@@ -6,7 +6,7 @@ using System.Collections;
 /// !!! DO NOT CHANGE Tabs to Spaces !!!
 ///
 [System.Serializable]
-public class stage1map1Data
+public class stage1Data
 {
   [SerializeField]
   int[] floor0tile = new int[0];
