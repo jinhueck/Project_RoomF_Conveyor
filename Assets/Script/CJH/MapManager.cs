@@ -49,7 +49,8 @@ public class MapManager : MonoBehaviour {
     }
 
     public int LoadMapNum()
-    {
+    {   
+        Mapnum = SelectMap.instance.returnMapNum();
         ArrNum(Mapnum, size);
         return Mapnum;
     }

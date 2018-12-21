@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SelectMap : MonoBehaviour {
 
     public int map;
-    SelectMap instance;
+    public static SelectMap instance;
 
-    void Start () {
+    public void Start () {
 
         if (instance == null)
             instance = this;
@@ -18,5 +18,11 @@ public class SelectMap : MonoBehaviour {
     public void MapNum(int num)
     {
        map=num;
+        SceneManager.LoadScene("CJH1");
+    }
+
+    public int returnMapNum()
+    {
+        return map;
     }
 }

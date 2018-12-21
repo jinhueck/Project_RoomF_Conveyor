@@ -425,7 +425,11 @@ MonoBehaviour:
   Conveyer: {fileID: 0}
   ground: {fileID: 0}
   prevPos: {x: 0, y: 0, z: 0}
+  BeforeSlidePos: {x: 0, y: 0, z: 0}
+  AfterSlidePos: {x: 0, y: 0, z: 0}
   layermask_Conveyer: 0
+  Map: {fileID: 737425584}
+  CheckRotate: 0
 --- !u!4 &653544289
 Transform:
   m_ObjectHideFlags: 0

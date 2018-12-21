@@ -29,12 +29,13 @@ public class MapGenerator : MonoBehaviour
     public void GeneratorMap()
     {
         MapManager.instance.SetMapInfo();
+        //Debug.Log("MapManager.instance.mapSize.x / 2 : " + MapManager.instance.mapSize.x / 2);
         for (int x = 0; x < MapManager.instance.mapSize.x; x++)
         {
             for (int y = 0; y < MapManager.instance.mapSize.y; y++)
             {
                 Vector3 tilePosition = (new Vector3(MapManager.instance.mapSize.x / 2, 0, MapManager.instance.mapSize.y / 2) 
-                    + new Vector3(x - MapManager.instance.mapSize.x, 0, y - MapManager.instance.mapSize.y)) * tilePrefab.transform.localScale.x;
+                    + new Vector3(x - MapManager.instance.mapSize.x + 0.5f, 0, y - MapManager.instance.mapSize.y + 0.5f)) * tilePrefab.transform.localScale.x;
                 Transform newTile = Instantiate(tilePrefab, tilePosition, Quaternion.identity) as Transform;
                 newTile.parent = Map.transform;
             }
@@ -48,7 +49,7 @@ public class MapGenerator : MonoBehaviour
         {
             for (int Childnum = 0; Childnum < MapManager.instance.size; Childnum++)
             {
-                Debug.Log("array 정보 Floor = " + Floor+ "Childnum = " + Childnum + " ="+ MapManager.instance.array[Floor, Childnum]);
+                //Debug.Log("array 정보 Floor = " + Floor+ "Childnum = " + Childnum + " ="+ MapManager.instance.array[Floor, Childnum]);
                 //array[Floor, Childnum] = 1;
                 MapManager.instance.SelectConveyor(MapManager.instance.array[Floor, Childnum], Childnum, Floor + 1);
                 //Debug.Log("array" + i + "," + j + " = " + test);

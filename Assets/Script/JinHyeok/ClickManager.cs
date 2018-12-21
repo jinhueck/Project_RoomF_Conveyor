@@ -10,7 +10,11 @@ public class ClickManager : MonoBehaviour
     public GameObject Conveyer;
     public Transform ground;
     public Vector3 prevPos;
+    public Vector3 BeforeSlidePos;
+    public Vector3 AfterSlidePos;
     public int layermask_Conveyer;
+    public GameObject Map;
+    public bool CheckRotate;
 
     int Glayermask;
 
@@ -37,12 +41,30 @@ public class ClickManager : MonoBehaviour
             }
 
         }
+        else if(Input.GetMouseButtonDown(0) && !Physics.Raycast(ray, out hit, Mathf.Infinity, layermask_Conveyer))
+        {
+            BeforeSlidePos = Input.mousePosition;
+            Debug.Log("마우스 클릭");
+        }
         if (Conveyer != null)
         {
             Drag();
         }
         if (Input.GetMouseButtonUp(0))
         {
+            if(BeforeSlidePos != null)
+            {
+                Debug.Log("BeforeSlidePos 들어옴");
+                AfterSlidePos = Input.mousePosition;
+                if (BeforeSlidePos.x > AfterSlidePos.x)
+                {
+                    MoveMapLeft();
+                }
+                else
+                {
+                    MoveMapRight();
+                }
+            }
             if (Conveyer != null)
             {
                 RaycastHit hit_Conveyer;
@@ -100,5 +122,57 @@ public class ClickManager : MonoBehaviour
             Conveyer.transform.parent.position = objPosition;
         }
     }
+    Coroutine cor;
+    public void MoveMapLeft()
+    {
+        setPos += new Vector3(0, 90, 0);
+        MapPos = Map.transform.rotation;
+        if (cor != null)
+            StopCoroutine(cor);
+        cor = StartCoroutine("StartMoveRight");
+    }
 
+    public void MoveMapRight()
+    {
+        setPos += new Vector3(0, -90, 0);
+        MapPos = Map.transform.rotation;
+        if (cor != null)
+            StopCoroutine(cor);
+        cor = StartCoroutine("StartMoveRight");
+    }
+
+    public Vector3 setPos = Vector3.zero;
+    Quaternion MapPos;
+
+
+
+    IEnumerator StartMoveRight()
+    {
+
+        bool moving = true;
+
+        float test = 0f;
+
+        while (test < 3)
+        {
+            Debug.Log("코루틴 도는중");
+            test += Time.deltaTime;
+            Map.transform.rotation = Quaternion.Slerp(Map.transform.rotation, Quaternion.Euler(setPos), test/3);
+            float num = setPos.y;
+            float num2 = Map.transform.rotation.y;
+
+            if (num < 0)
+                num += 360;
+            if (num2 < 0)
+                num2 += 360;
+            float total = Mathf.Abs(num - num2);
+            Debug.Log(" num : " + num + " num2 : " + num2 + "        " + total);
+            if (total < 0.05f)
+            {
+                moving = false;
+            }
+            yield return null;
+        }
+        yield return null;
+    }
 }

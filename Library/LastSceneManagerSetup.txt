@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CJH/CJH1.unity
+- path: Assets/Scenes/CJH/Select_Scene.unity
   isLoaded: 1
   isActive: 1
