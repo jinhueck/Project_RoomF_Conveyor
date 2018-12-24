@@ -20,8 +20,8 @@ public class MapManager : MonoBehaviour {
     public GameObject Tile5;
     public GameObject Tile9;
 
-    
 
+    public Transform map;
     private int ArrayJ;
 
     public int arraynum;
@@ -61,12 +61,13 @@ public class MapManager : MonoBehaviour {
         return arraynum;
     }
 
+
     public void GetConveyor()
     {
         for (int i = 0; i < 5; i++)
         {
             ArrayJ = 0;
-            for (int j = arraynum-9; j < arraynum; j++)
+            for (int j = arraynum-size; j < arraynum; j++)
             {     
                 if (i == 0)
                 {
@@ -106,21 +107,27 @@ public class MapManager : MonoBehaviour {
         {
             case 1:
                 NewOBJ = Instantiate(Tile1, pos, Tile1.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
             case 2:
                 NewOBJ = Instantiate(Tile2, pos, Tile2.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
             case 3:
                 NewOBJ = Instantiate(Tile3, pos, Tile3.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
             case 4:
                 NewOBJ = Instantiate(Tile4, pos, Tile4.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
             case 5:
                 NewOBJ = Instantiate(Tile5, pos, Tile5.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
             case 9:
                 NewOBJ = Instantiate(Tile9, pos, Tile9.transform.rotation);
+                NewOBJ.transform.SetParent(map);
                 break;
         }
 

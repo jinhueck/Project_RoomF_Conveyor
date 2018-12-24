@@ -19,25 +19,26 @@ public class MakeBox : MonoBehaviour {
 
     void Start ()
     {
-        Make("red", this.transform.position, 2f,10,true);
-       // Make("green", this.transform.position, 4f,10,false);
+        /*Make(1 ,2f,10,1);
+        Make(2, 4f,5,0);*/
     }
 
 
-    public void Make(string color, Vector3 pos, float time,int count,bool broke)
+    public void Make(int color, Vector3 pos, float time,int count,int broke)
     {
         for (int i = 1; i <= count; i++)
         {
-            StartCoroutine(MakeTime(color, pos, time*i, broke));
+            StartCoroutine(MakeTime(color,pos,time * i, broke));
         }
     }
 
-    IEnumerator MakeTime(string color, Vector3 pos, float time,bool broke)
+    IEnumerator MakeTime(int color,Vector3 pos, float time,int broke)
     {
         yield return new WaitForSeconds(time);
+        Debug.Log(pos);
         GameObject obj = Instantiate(Box, pos, this.transform.rotation);
 
-        if (broke == true)
+        if (broke == 1)
         {
             obj.AddComponent<FragileBox>();
             obj.name = "BrokenBox";
@@ -45,11 +46,11 @@ public class MakeBox : MonoBehaviour {
 
         switch (color)
         {
-            case "red":
+            case 1:
                 obj.GetComponent<MeshRenderer>().material = BoxColor[0];
                 obj.transform.GetChild(0).tag = "RedBox";
                 break;
-            case "green":
+            case 2:
                 obj.GetComponent<MeshRenderer>().material = BoxColor[1];
                 obj.transform.GetChild(0).tag = "GreenBox";
                 break;

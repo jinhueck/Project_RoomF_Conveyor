@@ -51,20 +51,7 @@ public class ClickManager : MonoBehaviour
             Drag();
         }
         if (Input.GetMouseButtonUp(0))
-        {
-            if(BeforeSlidePos != null)
-            {
-                Debug.Log("BeforeSlidePos 들어옴");
-                AfterSlidePos = Input.mousePosition;
-                if (BeforeSlidePos.x > AfterSlidePos.x)
-                {
-                    MoveMapLeft();
-                }
-                else
-                {
-                    MoveMapRight();
-                }
-            }
+        {   
             if (Conveyer != null)
             {
                 RaycastHit hit_Conveyer;
@@ -99,6 +86,24 @@ public class ClickManager : MonoBehaviour
                     }
 
                 }
+            }
+            else if (BeforeSlidePos != Vector3.zero)
+            {
+                Debug.Log("BeforeSlidePos 들어옴");
+                AfterSlidePos = Input.mousePosition;
+                float distance = Mathf.Abs(BeforeSlidePos.x - AfterSlidePos.x);
+                if(distance > 0.5f)
+                {
+                    if (BeforeSlidePos.x > AfterSlidePos.x)
+                    {
+                        MoveMapLeft();
+                    }
+                    else if (BeforeSlidePos.x < AfterSlidePos.x)
+                    {
+                        MoveMapRight();
+                    }
+                }
+                BeforeSlidePos = Vector3.zero;
             }
 
         }
@@ -155,7 +160,7 @@ public class ClickManager : MonoBehaviour
 
         while (test < 3)
         {
-            Debug.Log("코루틴 도는중");
+            //Debug.Log("코루틴 도는중");
             test += Time.deltaTime;
             Map.transform.rotation = Quaternion.Slerp(Map.transform.rotation, Quaternion.Euler(setPos), test/3);
             float num = setPos.y;
@@ -166,7 +171,7 @@ public class ClickManager : MonoBehaviour
             if (num2 < 0)
                 num2 += 360;
             float total = Mathf.Abs(num - num2);
-            Debug.Log(" num : " + num + " num2 : " + num2 + "        " + total);
+            //Debug.Log(" num : " + num + " num2 : " + num2 + "        " + total);
             if (total < 0.05f)
             {
                 moving = false;

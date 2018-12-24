@@ -165,7 +165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4598422298028502}
   - component: {fileID: 114754050161007518}
-  - component: {fileID: 114520620275757540}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1122,18 +1121,6 @@ MonoBehaviour:
   distance: 1
   instancedMaterial: 0
   speed: 0.5
---- !u!114 &114520620275757540
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1515088971997302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb029a150a387d46a713252b3456173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Goals: {fileID: 1153716093416920, guid: 5a6fc2d8b71c9e944aa414f62bb06fe3, type: 2}
 --- !u!114 &114547992560132632
 MonoBehaviour:
   m_ObjectHideFlags: 1
