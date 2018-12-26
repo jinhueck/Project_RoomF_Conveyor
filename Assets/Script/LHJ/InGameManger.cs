@@ -13,13 +13,16 @@ public class InGameManger : MonoBehaviour
     public int checkstar;
     public Image[] star;
     public Image Gage;
+    
+
 
     private void Awake()
     {
         if (instance == null)
             instance = this;
         SetGame(10);
-        Time.timeScale = 1f;
+        Time.timeScale =2f;
+        
     }
 
     void Update()

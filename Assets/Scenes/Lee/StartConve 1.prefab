@@ -156,22 +156,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1515088971997302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4598422298028502}
-  - component: {fileID: 114754050161007518}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1691797853643760
 GameObject:
   m_ObjectHideFlags: 1
@@ -220,6 +204,22 @@ GameObject:
   - component: {fileID: 4380426064152870}
   m_Layer: 0
   m_Name: Leg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1884834229859796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4130927183340028}
+  - component: {fileID: 114484665412577470}
+  m_Layer: 0
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,7 @@ Transform:
   - {fileID: 4600557549318900}
   - {fileID: 4425980380806542}
   m_Father: {fileID: 4057967787894672}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!4 &4057967787894672
 Transform:
@@ -291,9 +291,22 @@ Transform:
   m_LocalPosition: {x: -7.5, y: 2, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4130927183340028}
   - {fileID: 4021790954999148}
-  - {fileID: 4598422298028502}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4130927183340028
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884834229859796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057967787894672}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4149908796092876
@@ -391,19 +404,6 @@ Transform:
   m_Father: {fileID: 4021790954999148}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!4 &4598422298028502
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1515088971997302}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4057967787894672}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4600557549318900
 Transform:
   m_ObjectHideFlags: 1
@@ -1121,6 +1121,24 @@ MonoBehaviour:
   distance: 1
   instancedMaterial: 0
   speed: 0.5
+--- !u!114 &114484665412577470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884834229859796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9309af6c561a04098b50cb3e921014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  Box: {fileID: 1032559287870794, guid: 2c97a363e3804d1439a0f4faf60c4744, type: 2}
+  BoxColor:
+  - {fileID: 2100000, guid: d79eab2c6af0d4f4db350d55f1053038, type: 2}
+  - {fileID: 2100000, guid: c98f5667bcc2d1147978b8d581222d9c, type: 2}
+  starttime: 0
+  repeattime: 0
 --- !u!114 &114547992560132632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1135,23 +1153,6 @@ MonoBehaviour:
   distance: 1
   instancedMaterial: 0
   speed: 0.5
---- !u!114 &114754050161007518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1515088971997302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9309af6c561a04098b50cb3e921014, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Box: {fileID: 1032559287870794, guid: 2c97a363e3804d1439a0f4faf60c4744, type: 2}
-  BoxColor:
-  - {fileID: 2100000, guid: d79eab2c6af0d4f4db350d55f1053038, type: 2}
-  - {fileID: 2100000, guid: c98f5667bcc2d1147978b8d581222d9c, type: 2}
-  starttime: 20
-  repeattime: 5
 --- !u!114 &114824189007544832
 MonoBehaviour:
   m_ObjectHideFlags: 1

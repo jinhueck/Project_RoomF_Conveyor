@@ -10,6 +10,7 @@ public class ArriveBox : MonoBehaviour
     {
         if (other.tag=="Untagged")
             return;
+
         if (other.tag == this.tag)
         {
             InGameManger.instance.checkstar++;

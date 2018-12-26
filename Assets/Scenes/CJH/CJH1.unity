@@ -801,6 +801,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   set: {fileID: 0}
+  map: {fileID: 737425586}
+  startfor: 0
+  lastfor: 0
   startobj: {fileID: 1433174222822636, guid: a7cf9eea7ab641f46ade2016170b74df, type: 2}
 --- !u!114 &1021652622
 MonoBehaviour:
@@ -813,7 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb029a150a387d46a713252b3456173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Goals: {fileID: 1153716093416920, guid: 5a6fc2d8b71c9e944aa414f62bb06fe3, type: 2}
+  Goals: {fileID: 1539061117937762, guid: 5a6fc2d8b71c9e944aa414f62bb06fe3, type: 2}
+  map: {fileID: 737425586}
   set: {fileID: 0}
 --- !u!1 &1122878687
 GameObject:

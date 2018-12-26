@@ -5,11 +5,11 @@ using UnityEngine;
 public class MakeBox : MonoBehaviour {
 
     public static MakeBox instance;
-
     public GameObject Box;
     public Material[] BoxColor;
     public float starttime;
     public float repeattime;
+   
 
     private void Awake()
     {
@@ -17,14 +17,9 @@ public class MakeBox : MonoBehaviour {
             instance = this;
     }
 
-    void Start ()
-    {
-        /*Make(1 ,2f,10,1);
-        Make(2, 4f,5,0);*/
-    }
 
 
-    public void Make(int color, Vector3 pos, float time,int count,int broke)
+    public void Make(int color, Transform pos, float time,int count,int broke)
     {
         for (int i = 1; i <= count; i++)
         {
@@ -32,11 +27,12 @@ public class MakeBox : MonoBehaviour {
         }
     }
 
-    IEnumerator MakeTime(int color,Vector3 pos, float time,int broke)
+    IEnumerator MakeTime(int color,Transform pos, float time,int broke)
     {
         yield return new WaitForSeconds(time);
-        Debug.Log(pos);
-        GameObject obj = Instantiate(Box, pos, this.transform.rotation);
+        GameObject obj = Instantiate(Box, pos.position, this.transform.rotation);
+        obj.transform.SetParent(GameObject.Find("Map").transform);
+
 
         if (broke == 1)
         {
@@ -58,5 +54,6 @@ public class MakeBox : MonoBehaviour {
                 Debug.Log("Error Color");
                 break;
         }
+        
     }
 }

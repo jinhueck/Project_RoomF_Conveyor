@@ -14,8 +14,28 @@ MonoBehaviour:
   SheetName: Project_Conveyor
   WorksheetName: makegoal
   dataArray:
-  - rotate: 01000000
+  - rotate: 03000000
     color: 01000000
     x: feffffff
-    y: 00000000
+    y: 01000000
     z: 00000000
+  - rotate: 02000000
+    color: 01000000
+    x: 01000000
+    y: 01000000
+    z: feffffff
+  - rotate: 02000000
+    color: 01000000
+    x: 01000000
+    y: 01000000
+    z: feffffff
+  - rotate: 01000000
+    color: 01000000
+    x: 02000000
+    y: 01000000
+    z: ffffffff
+  - rotate: 02000000
+    color: 01000000
+    x: 00000000
+    y: 01000000
+    z: feffffff

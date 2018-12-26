@@ -57,6 +57,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4422389079034444}
+  - component: {fileID: 114594840261693950}
   m_Layer: 0
   m_Name: Move_Right
   m_TagString: Untagged
@@ -1105,6 +1106,17 @@ MonoBehaviour:
   distance: 1
   instancedMaterial: 0
   speed: 0.5
+--- !u!114 &114594840261693950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217784152670866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ffc42e96809ad4382fc5d00151ca6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114751362045761694
 MonoBehaviour:
   m_ObjectHideFlags: 1

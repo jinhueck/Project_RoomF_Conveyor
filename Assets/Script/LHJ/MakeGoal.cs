@@ -6,6 +6,7 @@ public class MakeGoal : MonoBehaviour
 {
 
     public GameObject Goals;
+    public Transform map;
     public makegoal set;
 
     int[] color;
@@ -13,9 +14,10 @@ public class MakeGoal : MonoBehaviour
     float[] y;
     float[] z;
     int[] rotate;
+    int startfor;
+    int lastfor;
     int size;
-
-    void Start ()
+   void Start ()
     {
 
         set = Resources.Load<makegoal>("Lee/New makegoal");
@@ -24,21 +26,24 @@ public class MakeGoal : MonoBehaviour
         SetQuick();
     }
 
-    void SetQuick()
-    {
-        for(int i=0;i<1;i++)
-        {
-            rotate[i] = set.dataArray[i].Rotate[0];
-            x[i] = (float)set.dataArray[i].X[0];
-            y[i] = (float)set.dataArray[i].Y[0];
-            z[i] = (float)set.dataArray[i].Z[0];
-            color[i] = set.dataArray[i].Color[0];
-            SetGoal(i);
-        }
-    }
+     void SetQuick()
+      {
+          for(int i= startfor; i< lastfor; i++)
+          {
+              rotate[i] = set.dataArray[i].Rotate[0];
+              x[i] = (float)set.dataArray[i].X[0];
+              y[i] = (float)set.dataArray[i].Y[0];
+              z[i] = (float)set.dataArray[i].Z[0];
+              color[i] = set.dataArray[i].Color[0];
+              SetGoal(i);
+          }
+      }
 
     void reset()
     {
+        size = SelectMap.instance.lastnum;
+        startfor = SelectMap.instance.startnum;
+        lastfor = SelectMap.instance.lastnum;
         color = new int[size];
         x = new float[size];
         y= new float[size];
@@ -51,14 +56,15 @@ public class MakeGoal : MonoBehaviour
         int j = num;
         Vector3 Summon = new Vector3((3 * x[j]), y[j], (3 * z[j]));
         GameObject goal = Instantiate(Goals, Summon, this.transform.rotation);
+        goal.transform.SetParent(map);
 
         switch (color[j])
         {
             case 1:
-                goal.tag = "RedBox";
+                goal.transform.GetChild(0).tag = "RedBox";
                 break;
             case 2:
-                goal.tag = "GreenBox";
+                goal.transform.GetChild(0).tag = "GreenBox";
                 break;
 
         }
@@ -69,13 +75,13 @@ public class MakeGoal : MonoBehaviour
                 
                 break;
             case 2:
-                
+                goal.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
             case 3:
-
+                goal.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 break;
             case 4:
-
+                goal.transform.rotation = Quaternion.Euler(0f, 270f, 0f);
                 break;
         }
     }

@@ -12,7 +12,6 @@ public class MapManager : MonoBehaviour {
     public int size; // 배열의 크기
     public int[,] array; // 배열
 
-
     public GameObject Tile1;
     public GameObject Tile2;
     public GameObject Tile3;
@@ -42,8 +41,8 @@ public class MapManager : MonoBehaviour {
     public void SetMapInfo()
     {
         conveyorInfo = Resources.Load<stage1>("CJH/New stage1");
-        mapSize.x = conveyorInfo.dataArray[0].Mapsize[0];
-        mapSize.y = conveyorInfo.dataArray[1].Mapsize[0];
+        mapSize.x = conveyorInfo.dataArray[SelectMap.instance.mapX].Mapsize[0];
+        mapSize.y = conveyorInfo.dataArray[SelectMap.instance.mapY].Mapsize[0];
         size = (int)(mapSize.x * mapSize.y);
         array = new int[5, size];
     }

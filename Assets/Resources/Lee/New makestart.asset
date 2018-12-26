@@ -14,11 +14,43 @@ MonoBehaviour:
   SheetName: Project_Conveyor
   WorksheetName: makestart
   dataArray:
-  - num: 01000000
+  - num: 02000000
     x: 01000000
     y: 01000000
-    z: 01000000
+    z: 02000000
     color: 01000000
     time: 02000000
     count: 0a000000
-    broke: 01000000
+    broke: 02000000
+  - num: 02000000
+    x: ffffffff
+    y: 01000000
+    z: 02000000
+    color: 01000000
+    time: 02000000
+    count: 0a000000
+    broke: 02000000
+  - num: 04000000
+    x: ffffffff
+    y: 01000000
+    z: feffffff
+    color: 01000000
+    time: 02000000
+    count: 0a000000
+    broke: 02000000
+  - num: 04000000
+    x: ffffffff
+    y: 01000000
+    z: feffffff
+    color: 01000000
+    time: 02000000
+    count: 0a000000
+    broke: 02000000
+  - num: 02000000
+    x: 00000000
+    y: 01000000
+    z: 02000000
+    color: 01000000
+    time: 02000000
+    count: 0a000000
+    broke: 02000000
