@@ -89,23 +89,79 @@ public class ClickManager : MonoBehaviour
             }
             else if (BeforeSlidePos != Vector3.zero)
             {
+                
                 Debug.Log("BeforeSlidePos 들어옴");
                 AfterSlidePos = Input.mousePosition;
-                float distance = Mathf.Abs(BeforeSlidePos.x - AfterSlidePos.x);
-                if(distance > 0.5f)
+                float distancex = Mathf.Abs(BeforeSlidePos.x - AfterSlidePos.x);
+                float distancey = Mathf.Abs(BeforeSlidePos.y - AfterSlidePos.y);
+                if (BeforeSlidePos.y > Screen.height / 2)
                 {
-                    if (BeforeSlidePos.x > AfterSlidePos.x)
+                    if (distancex > distancey)
                     {
-                        MoveMapLeft();
+                        if (BeforeSlidePos.x > AfterSlidePos.x)
+                        {
+                            MoveMapRight();
+                        }
+                        else if (BeforeSlidePos.x < AfterSlidePos.x)
+                        {
+                            MoveMapLeft();
+                        }
                     }
-                    else if (BeforeSlidePos.x < AfterSlidePos.x)
+                    else if (distancey > distancex)
                     {
-                        MoveMapRight();
+                        if (BeforeSlidePos.x > Screen.width / 2)//오른쪽
+                        {   
+                            if (BeforeSlidePos.y > AfterSlidePos.y)//오른쪽위
+                            {
+                                MoveMapLeft();
+                                Debug.Log("오른쪽 위에서 오른쪽 아래로");
+                            }
+                        }
+                        else if(BeforeSlidePos.x < Screen.width / 2)//왼쪽
+                        {
+                            if (BeforeSlidePos.y > AfterSlidePos.y)//왼쪽위
+                            {
+                                MoveMapRight();
+                                Debug.Log("왼쪽 위에서 왼쪽 아래로");
+                            }
+                        }
+                    }
+                }
+                else if(BeforeSlidePos.y < Screen.height/2)
+                {
+                    if (distancex > distancey)
+                    {
+                        if (BeforeSlidePos.x > AfterSlidePos.x)
+                        {
+                            MoveMapLeft();
+                        }
+                        else if (BeforeSlidePos.x < AfterSlidePos.x)
+                        {
+                            MoveMapRight();
+                        }
+                    }
+                    else if (distancey > distancex)
+                    {
+                        if (BeforeSlidePos.x < Screen.width / 2)
+                        {
+                            if (BeforeSlidePos.y < AfterSlidePos.y)//왼쪽 아래
+                            {
+                                MoveMapLeft();
+                                Debug.Log("왼쪽 아래에서 왼쪽 위로");
+                            }
+                        }
+                        else if(BeforeSlidePos.x > Screen.width / 2)
+                        {
+                            if (BeforeSlidePos.y < AfterSlidePos.y)
+                            {
+                                MoveMapRight();
+                                Debug.Log("오른쪽 아래에서 오른쪽 위로");
+                            }
+                        }
                     }
                 }
                 BeforeSlidePos = Vector3.zero;
             }
-
         }
     }
     public void Drag()

@@ -48,7 +48,7 @@ public class InGameManger : MonoBehaviour
             if (checkstar == 0)
                 star[3].gameObject.SetActive(true);
 
-            Time.timeScale = 0f;
+            Time.timeScale = 2f;
         }
 
     }

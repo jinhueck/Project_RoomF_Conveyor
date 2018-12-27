@@ -31,6 +31,7 @@ public class MapManager : MonoBehaviour {
     {
         if (instance == null)
             instance = this;
+        Screen.SetResolution(1280, 720, true);
         SetMapInfo();
         LoadMapNum();
         MapGenerator.instance.GeneratorMap();
