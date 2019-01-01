@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour {
     public static MapManager instance;
 
     public stage1 conveyorInfo;
+    public stage2 conveyorInfo2;
     public int Mapnum;//맵의 번호
     public Vector2 mapSize;
     public int size; // 배열의 크기
@@ -17,15 +18,14 @@ public class MapManager : MonoBehaviour {
     public GameObject Tile3;
     public GameObject Tile4;
     public GameObject Tile5;
+    public GameObject Tile8;
     public GameObject Tile9;
 
 
     public Transform map;
     private int ArrayJ;
-
-    public int arraynum;
-
-
+    
+    
 
      void Start ()
     {
@@ -41,33 +41,36 @@ public class MapManager : MonoBehaviour {
 
     public void SetMapInfo()
     {
-        conveyorInfo = Resources.Load<stage1>("CJH/New stage1");
-        mapSize.x = conveyorInfo.dataArray[SelectMap.instance.mapX].Mapsize[0];
-        mapSize.y = conveyorInfo.dataArray[SelectMap.instance.mapY].Mapsize[0];
+        LoadMapNum();
         size = (int)(mapSize.x * mapSize.y);
         array = new int[5, size];
     }
 
-    public int LoadMapNum()
+    public void LoadMapNum()
     {   
         Mapnum = SelectMap.instance.returnMapNum();
-        ArrNum(Mapnum, size);
-        return Mapnum;
+        switch(Mapnum)
+        {
+            case 1:
+                conveyorInfo = Resources.Load<stage1>("CJH/New stage1");
+                mapSize.x = conveyorInfo.dataArray[SelectMap.instance.mapX].Mapsize[0];
+                mapSize.y = conveyorInfo.dataArray[SelectMap.instance.mapY].Mapsize[0];
+                break;
+            case 2:
+                conveyorInfo2 = Resources.Load<stage2>("CJH/New stage2");
+                mapSize.x = conveyorInfo2.dataArray[SelectMap.instance.mapX].Mapsize[0];
+                mapSize.y = conveyorInfo2.dataArray[SelectMap.instance.mapY].Mapsize[0];
+                break;
+        }
     }
-
-    public int ArrNum(int num,int a)
-    {
-        arraynum = num * a;
-        return arraynum;
-    }
-
-
+    //1.스위치문별로 getconveyor 함수를 다르게 호출한다.
+    //2.퀵시트를 하나로 합친다.
     public void GetConveyor()
-    {
+    {   
         for (int i = 0; i < 5; i++)
         {
             ArrayJ = 0;
-            for (int j = arraynum-size; j < arraynum; j++)
+            for (int j = SelectMap.instance.mapX; j < SelectMap.instance.mapY; j++)
             {     
                 if (i == 0)
                 {
@@ -123,6 +126,10 @@ public class MapManager : MonoBehaviour {
                 break;
             case 5:
                 NewOBJ = Instantiate(Tile5, pos, Tile5.transform.rotation);
+                NewOBJ.transform.SetParent(map);
+                break;
+            case 8:
+                NewOBJ = Instantiate(Tile8, pos, Tile8.transform.rotation);
                 NewOBJ.transform.SetParent(map);
                 break;
             case 9:

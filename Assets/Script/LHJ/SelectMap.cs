@@ -45,11 +45,8 @@ public class SelectMap : MonoBehaviour {
         mapX = numx;
     }
 
-    
-
     public void ReturnY(int numy)
     {
         mapY = numy;
     }
-    
 }

@@ -25,7 +25,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 03000000
+    mapsize: 
   - floor0tile: 82000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -67,7 +67,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 
+    mapsize: 03000000
   - floor0tile: 6e000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -79,7 +79,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 03000000
+    mapsize: 
   - floor0tile: 4a010000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -121,7 +121,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 
+    mapsize: 03000000
   - floor0tile: 8c000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -133,7 +133,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 03000000
+    mapsize: 
   - floor0tile: f0000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -175,7 +175,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 
+    mapsize: 03000000
   - floor0tile: f0000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -187,7 +187,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 03000000
+    mapsize: 
   - floor0tile: d2000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -229,7 +229,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 
+    mapsize: 03000000
   - floor0tile: 00000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -241,7 +241,7 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 03000000
+    mapsize: 
   - floor0tile: dc000000
     floor1tile: 00000000
     floor2tile: 00000000
@@ -283,4 +283,4 @@ MonoBehaviour:
     floor2tile: 00000000
     floor3tile: 00000000
     floor4tile: 00000000
-    mapsize: 
+    mapsize: 03000000
