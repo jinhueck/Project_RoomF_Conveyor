@@ -7,7 +7,6 @@ public class MapManager : MonoBehaviour {
     public static MapManager instance;
 
     public stage1 conveyorInfo;
-    public stage2 conveyorInfo2;
     public int Mapnum;//맵의 번호
     public Vector2 mapSize;
     public int size; // 배열의 크기
@@ -33,38 +32,20 @@ public class MapManager : MonoBehaviour {
             instance = this;
         Screen.SetResolution(1280, 720, true);
         SetMapInfo();
-        LoadMapNum();
         MapGenerator.instance.GeneratorMap();
         GetConveyor();
         MapGenerator.instance.SetUpConveyor();
     }
 
     public void SetMapInfo()
-    {
-        LoadMapNum();
+    {   
+        conveyorInfo = Resources.Load<stage1>("CJH/New stage1");
+        mapSize.x = conveyorInfo.dataArray[SelectMap.instance.mapX].Mapsize[0];
+        mapSize.y = conveyorInfo.dataArray[SelectMap.instance.mapY].Mapsize[0];
         size = (int)(mapSize.x * mapSize.y);
         array = new int[5, size];
     }
 
-    public void LoadMapNum()
-    {   
-        Mapnum = SelectMap.instance.returnMapNum();
-        switch(Mapnum)
-        {
-            case 1:
-                conveyorInfo = Resources.Load<stage1>("CJH/New stage1");
-                mapSize.x = conveyorInfo.dataArray[SelectMap.instance.mapX].Mapsize[0];
-                mapSize.y = conveyorInfo.dataArray[SelectMap.instance.mapY].Mapsize[0];
-                break;
-            case 2:
-                conveyorInfo2 = Resources.Load<stage2>("CJH/New stage2");
-                mapSize.x = conveyorInfo2.dataArray[SelectMap.instance.mapX].Mapsize[0];
-                mapSize.y = conveyorInfo2.dataArray[SelectMap.instance.mapY].Mapsize[0];
-                break;
-        }
-    }
-    //1.스위치문별로 getconveyor 함수를 다르게 호출한다.
-    //2.퀵시트를 하나로 합친다.
     public void GetConveyor()
     {   
         for (int i = 0; i < 5; i++)

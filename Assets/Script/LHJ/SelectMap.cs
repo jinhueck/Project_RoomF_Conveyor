@@ -17,18 +17,6 @@ public class SelectMap : MonoBehaviour {
         if (instance == null)
             instance = this;
 	}
-	
-
-    public void MapNum(int num)
-    {
-       map=num;
-        SceneManager.LoadScene("CJH1");
-    }
-
-    public int returnMapNum()
-    {
-        return map;
-    }
     
     public void MakeStart(int start)
     {
@@ -48,5 +36,6 @@ public class SelectMap : MonoBehaviour {
     public void ReturnY(int numy)
     {
         mapY = numy;
+        SceneManager.LoadScene("CJH1");
     }
 }
