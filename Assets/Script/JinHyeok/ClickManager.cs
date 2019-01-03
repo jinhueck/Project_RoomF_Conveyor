@@ -30,18 +30,21 @@ public class ClickManager : MonoBehaviour
         ray = camera.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * 100.0f, Color.red);
         //Conveyer = hit.transform.gameObject;
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, Mathf.Infinity, layermask_Conveyer) && (hit.transform.tag == "Conveyor" || hit.transform.tag == "Conveyor_Stair"))
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, Mathf.Infinity, layermask_Conveyer))
         {
-            prevPos = hit.transform.parent.position;
-            RaycastHit hit_Conveyer;
-            if (!Physics.Raycast(hit.transform.parent.position, hit.transform.up, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
+            if (hit.transform.tag == "Conveyor" || hit.transform.tag == "Conveyor_Stair" || hit.transform.tag == "Trap_Move")
             {
-                Conveyer = hit.transform.gameObject;
-                Conveyer.transform.GetChild(0).gameObject.SetActive(false);
+                prevPos = hit.transform.parent.position;
+                RaycastHit hit_Conveyer;
+                if (!Physics.Raycast(hit.transform.parent.position, hit.transform.up, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
+                {
+                    Conveyer = hit.transform.gameObject;
+                    Conveyer.transform.GetChild(0).gameObject.SetActive(false);
+                }
             }
 
         }
-        else if(Input.GetMouseButtonDown(0) && !Physics.Raycast(ray, out hit, Mathf.Infinity, layermask_Conveyer))
+        else if (Input.GetMouseButtonDown(0) && !Physics.Raycast(ray, out hit, Mathf.Infinity, layermask_Conveyer))
         {
             BeforeSlidePos = Input.mousePosition;
             Debug.Log("마우스 클릭");
@@ -51,7 +54,7 @@ public class ClickManager : MonoBehaviour
             Drag();
         }
         if (Input.GetMouseButtonUp(0))
-        {   
+        {
             if (Conveyer != null)
             {
                 RaycastHit hit_Conveyer;
@@ -62,13 +65,20 @@ public class ClickManager : MonoBehaviour
                     if (Physics.Raycast(up_Pos, Conveyer.transform.up * -1, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
                     {
                         Vector3 pos_Conveyer;
-                        if (hit_Conveyer.transform.tag == "Conveyor" || hit_Conveyer.transform.tag == "nonClick")
+                        if ((hit_Conveyer.transform.tag == "Conveyor" || hit_Conveyer.transform.tag == "nonClick"))
                         {
-                            pos_Conveyer = hit_Conveyer.transform.parent.position;
+                            Debug.Log("와씨 여긴 들어오면서 그렇게 행동한거야?");
+                            if (Conveyer.tag == "Trap_Move")
+                                pos_Conveyer = prevPos;
+                            else
+                                pos_Conveyer = hit_Conveyer.transform.parent.position;
                         }
                         else if (hit_Conveyer.transform.tag == "Conveyor_Stair" || hit_Conveyer.transform.tag == "nonClick_Stair")
                         {
-                            pos_Conveyer = hit_Conveyer.transform.parent.position + new Vector3(0, Conveyer.transform.localScale.y, 0);
+                            if (Conveyer.tag == "Trap_Move")
+                                pos_Conveyer = prevPos;
+                            else
+                                pos_Conveyer = hit_Conveyer.transform.parent.position + new Vector3(0, Conveyer.transform.localScale.y, 0);
                         }
                         else
                             pos_Conveyer = hit_Conveyer.transform.position;
@@ -80,7 +90,13 @@ public class ClickManager : MonoBehaviour
                         }
 
                         else
-                            Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y + hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
+                        {
+                            if (Conveyer.tag == "Trap_Move")
+                                Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
+                            else
+                                Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y + hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
+                        }
+
                         Conveyer.transform.GetChild(0).gameObject.SetActive(true);
                         Conveyer = null;
                     }
@@ -89,7 +105,7 @@ public class ClickManager : MonoBehaviour
             }
             else if (BeforeSlidePos != Vector3.zero)
             {
-                
+
                 Debug.Log("BeforeSlidePos 들어옴");
                 AfterSlidePos = Input.mousePosition;
                 float distancex = Mathf.Abs(BeforeSlidePos.x - AfterSlidePos.x);
@@ -110,14 +126,14 @@ public class ClickManager : MonoBehaviour
                     else if (distancey > distancex)
                     {
                         if (BeforeSlidePos.x > Screen.width / 2)//오른쪽
-                        {   
+                        {
                             if (BeforeSlidePos.y > AfterSlidePos.y)//오른쪽위
                             {
                                 MoveMapLeft();
                                 Debug.Log("오른쪽 위에서 오른쪽 아래로");
                             }
                         }
-                        else if(BeforeSlidePos.x < Screen.width / 2)//왼쪽
+                        else if (BeforeSlidePos.x < Screen.width / 2)//왼쪽
                         {
                             if (BeforeSlidePos.y > AfterSlidePos.y)//왼쪽위
                             {
@@ -127,7 +143,7 @@ public class ClickManager : MonoBehaviour
                         }
                     }
                 }
-                else if(BeforeSlidePos.y < Screen.height/2)
+                else if (BeforeSlidePos.y < Screen.height / 2)
                 {
                     if (distancex > distancey)
                     {
@@ -150,7 +166,7 @@ public class ClickManager : MonoBehaviour
                                 Debug.Log("왼쪽 아래에서 왼쪽 위로");
                             }
                         }
-                        else if(BeforeSlidePos.x > Screen.width / 2)
+                        else if (BeforeSlidePos.x > Screen.width / 2)
                         {
                             if (BeforeSlidePos.y < AfterSlidePos.y)
                             {
@@ -218,7 +234,7 @@ public class ClickManager : MonoBehaviour
         {
             //Debug.Log("코루틴 도는중");
             test += Time.deltaTime;
-            Map.transform.rotation = Quaternion.Slerp(Map.transform.rotation, Quaternion.Euler(setPos), test/3);
+            Map.transform.rotation = Quaternion.Slerp(Map.transform.rotation, Quaternion.Euler(setPos), test / 3);
             float num = setPos.y;
             float num2 = Map.transform.rotation.y;
 

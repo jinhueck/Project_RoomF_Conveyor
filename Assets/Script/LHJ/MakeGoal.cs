@@ -31,9 +31,9 @@ public class MakeGoal : MonoBehaviour
           for(int i= startfor; i< lastfor; i++)
           {
               rotate[i] = set.dataArray[i].Rotate[0];
-              x[i] = (float)set.dataArray[i].X[0];
-              y[i] = (float)set.dataArray[i].Y[0];
-              z[i] = (float)set.dataArray[i].Z[0];
+              x[i] = set.dataArray[i].X[0];
+              y[i] = set.dataArray[i].Y[0];
+              z[i] = set.dataArray[i].Z[0];
               color[i] = set.dataArray[i].Color[0];
               SetGoal(i);
           }

@@ -75,11 +75,11 @@ public class MakeStart : MonoBehaviour
             Debug.Log("setquick / for");
      
                 rotate[i] = set.dataArray[i].Num[0];
-                x[i] = (float)set.dataArray[i].X[0];
-                y[i] = (float)set.dataArray[i].Y[0];
-                z[i] = (float)set.dataArray[i].Z[0];
+                x[i] = set.dataArray[i].X[0];
+                y[i] = set.dataArray[i].Y[0];
+                z[i] = set.dataArray[i].Z[0];
                 color[i] = set.dataArray[i].Color[0];
-                time[i] = (float)set.dataArray[i].Time[0];
+                time[i] = set.dataArray[i].Time[0];
                 count[i] = set.dataArray[i].Count[0];
                 broke[i] = set.dataArray[i].Broke[0];
                 Setstart(i);

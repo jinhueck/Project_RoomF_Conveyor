@@ -15,42 +15,122 @@ MonoBehaviour:
   WorksheetName: makestart
   dataArray:
   - num: 02000000
-    x: 01000000
-    y: 01000000
-    z: 02000000
+    x:
+    - 1
+    y:
+    - 1
+    z:
+    - 2
     color: 01000000
-    time: 02000000
+    time:
+    - 2
     count: 0a000000
     broke: 02000000
   - num: 02000000
-    x: ffffffff
-    y: 01000000
-    z: 02000000
+    x:
+    - -1
+    y:
+    - 1
+    z:
+    - 2
     color: 01000000
-    time: 02000000
+    time:
+    - 2
     count: 0a000000
     broke: 02000000
   - num: 04000000
-    x: ffffffff
-    y: 01000000
-    z: feffffff
+    x:
+    - -1
+    y:
+    - 1
+    z:
+    - -2
     color: 01000000
-    time: 02000000
+    time:
+    - 2
     count: 0a000000
     broke: 02000000
   - num: 04000000
-    x: ffffffff
-    y: 01000000
-    z: feffffff
+    x:
+    - -1
+    y:
+    - 1
+    z:
+    - -2
     color: 01000000
-    time: 02000000
+    time:
+    - 2
     count: 0a000000
     broke: 02000000
   - num: 02000000
-    x: 00000000
-    y: 01000000
-    z: 02000000
+    x:
+    - 0
+    y:
+    - 1
+    z:
+    - 2
     color: 01000000
-    time: 02000000
+    time:
+    - 2
+    count: 0a000000
+    broke: 02000000
+  - num: 02000000
+    x:
+    - 1
+    y:
+    - 2
+    z:
+    - 2
+    color: 01000000
+    time:
+    - 2
+    count: 0a000000
+    broke: 02000000
+  - num: 03000000
+    x:
+    - 3
+    y:
+    - 1
+    z:
+    - -1
+    color: 01000000
+    time:
+    - 2
+    count: 0a000000
+    broke: 02000000
+  - num: 02000000
+    x:
+    - -1
+    y:
+    - 2
+    z:
+    - 2
+    color: 01000000
+    time:
+    - 2
+    count: 0a000000
+    broke: 02000000
+  - num: 02000000
+    x:
+    - -0.5
+    y:
+    - 1
+    z:
+    - 2
+    color: 01000000
+    time:
+    - 2
+    count: 0a000000
+    broke: 02000000
+  - num: 01000000
+    x:
+    - -3
+    y:
+    - 3
+    z:
+    - 1
+    color: 01000000
+    time:
+    - 2
     count: 0a000000
     broke: 02000000
