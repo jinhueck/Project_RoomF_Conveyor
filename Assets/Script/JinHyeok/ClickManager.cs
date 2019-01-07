@@ -34,9 +34,10 @@ public class ClickManager : MonoBehaviour
         {
             if (hit.transform.tag == "Conveyor" || hit.transform.tag == "Conveyor_Stair" || hit.transform.tag == "Trap_Move")
             {
+                Debug.Log("여긴 들어오네");
                 prevPos = hit.transform.parent.position;
                 RaycastHit hit_Conveyer;
-                if (!Physics.Raycast(hit.transform.parent.position, hit.transform.up, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
+                if (!Physics.Raycast(hit.transform.parent.position + new Vector3(0,0.5f,0), hit.transform.up, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
                 {
                     Conveyer = hit.transform.gameObject;
                     Conveyer.transform.GetChild(0).gameObject.SetActive(false);
@@ -60,6 +61,7 @@ public class ClickManager : MonoBehaviour
                 RaycastHit hit_Conveyer;
                 if (ground != null)
                 {
+                    bool checkBool = false;
                     Vector3 ground_Pos = ground.transform.position;
                     Vector3 up_Pos = new Vector3(ground_Pos.x, Conveyer.transform.position.y - 0.1f, ground_Pos.z);
                     if (Physics.Raycast(up_Pos, Conveyer.transform.up * -1, out hit_Conveyer, Mathf.Infinity, layermask_Conveyer))
@@ -67,9 +69,16 @@ public class ClickManager : MonoBehaviour
                         Vector3 pos_Conveyer;
                         if ((hit_Conveyer.transform.tag == "Conveyor" || hit_Conveyer.transform.tag == "nonClick"))
                         {
-                            Debug.Log("와씨 여긴 들어오면서 그렇게 행동한거야?");
-                            if (Conveyer.tag == "Trap_Move")
+                            if (Conveyer.tag == "Trap_Move" && hit_Conveyer.transform.tag == "Conveyor")
+                            {
                                 pos_Conveyer = prevPos;
+                            }
+                            else if(Conveyer.tag == "Trap_Move")
+                            {
+                                checkBool = true;
+                                pos_Conveyer = hit_Conveyer.transform.parent.position;
+                            }
+                                
                             else
                                 pos_Conveyer = hit_Conveyer.transform.parent.position;
                         }
@@ -86,13 +95,22 @@ public class ClickManager : MonoBehaviour
                         ground.GetComponent<MeshRenderer>().material.color = Color.green;
                         if (hit_Conveyer.transform.parent.position.y >= Conveyer.transform.localScale.y * 5)
                         {
+
+                            if (Conveyer.tag == "Trap_Move")
+                            {
+                                Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, hit_Conveyer.point.y + .5f, pos_Conveyer.z);
+                            }
                             Conveyer.transform.parent.position = prevPos;
                         }
-
                         else
                         {
                             if (Conveyer.tag == "Trap_Move")
-                                Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
+                            {
+                                if (pos_Conveyer == prevPos)
+                                    Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y, pos_Conveyer.z);
+                                else
+                                    Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, hit_Conveyer.point.y + .5f, pos_Conveyer.z);
+                            } 
                             else
                                 Conveyer.transform.parent.position = new Vector3(pos_Conveyer.x, pos_Conveyer.y + hit_Conveyer.transform.localScale.y, pos_Conveyer.z);
                         }
