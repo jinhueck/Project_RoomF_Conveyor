@@ -530,7 +530,7 @@ MonoBehaviour:
     floor3tile: 00000000
     floor4tile: 00000000
     mapsize: 
-  - floor0tile: ae010000
+  - floor0tile: a4010000
     floor1tile: 00000000
     floor2tile: 00000000
     floor3tile: 00000000

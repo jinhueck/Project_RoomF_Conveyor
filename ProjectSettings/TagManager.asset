@@ -11,6 +11,8 @@ TagManager:
   - nonClick_Stair
   - RedBox
   - GreenBox
+  - Undefined
+  - Trap_Move
   layers:
   - Default
   - TransparentFX

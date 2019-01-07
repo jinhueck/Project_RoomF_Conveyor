@@ -83,7 +83,7 @@ MonoBehaviour:
     x:
     - 2.5
     y:
-    - 2
+    - 3
     z:
     - 0
   - rotate: 02000000
