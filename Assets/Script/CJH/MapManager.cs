@@ -51,7 +51,7 @@ public class MapManager : MonoBehaviour {
         for (int i = 0; i < 5; i++)
         {
             ArrayJ = 0;
-            for (int j = SelectMap.instance.mapX; j < SelectMap.instance.mapY; j++)
+            for (int j = SelectMap.instance.mapX; j <= SelectMap.instance.mapY; j++)
             {     
                 if (i == 0)
                 {
